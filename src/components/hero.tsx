@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -24,7 +26,7 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-8 md:px-16 lg:px-24">
-      <div className="flex flex-col md:flex-row items-center md:items-center w-full mt-20 gap-30">
+      <div className="flex flex-col md:flex-row items-center md:items-center w-full mt-40 gap-40">
         <div className="flex flex-col items-center justify-center w-full md:w-1/2 animate-fadeIn">
           <p className="text-black text-lg sm:text-xl capitalize">Olá, {nome ? nome : "meu amigo(a)"}! Me chamo</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">Markus Danyllo</h1>
@@ -32,7 +34,7 @@ export default function Hero() {
             Desenvolvedor de Software e Técnico de Robótica
           </p>
         </div>
-        <img
+        <Image
           className="w-48 sm:w-64 md:w-80 rounded-3xl hover:scale-105 transition-transform duration-500 animate-fadeIn"
           src="/perfil.jpg"
           alt="Markus programando"
@@ -41,11 +43,11 @@ export default function Hero() {
       </div>
       <section className="w-1/2 flex flex-col sm:flex-row justify-center sm:justify-end ml-52 mt-4 gap-4 sm:gap-8 animate-fadeIn">
         <a className="flex items-center text-black text-sm sm:text-base font-semibold gap-2 hover:scale-110 transition-transform duration-300" href="https://github.com/mdanyllo">
-          <img className="w-8 sm:w-6" src="/github.png" alt="GitHub" />
+          <Image className="w-8 sm:w-6" src="/github.png" alt="GitHub" />
           GitHub
         </a>
         <a className="flex items-center text-black text-sm sm:text-base font-semibold gap-2 hover:scale-110 transition-transform duration-300" href="https://www.linkedin.com/in/markusdanyllo">
-          <img className="w-8 sm:w-6" src="/linkedin.png" alt="LinkedIn" />
+          <Image className="w-8 sm:w-6" src="/linkedin.png" alt="LinkedIn" />
           LinkedIn
         </a>
       </section>
