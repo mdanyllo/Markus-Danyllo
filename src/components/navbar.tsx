@@ -11,10 +11,10 @@ export default function Navbar() {
         <div className="text-xl font-bold"></div>
 
         <div className="hidden md:flex gap-8">
-          <a className="text-black hover:text-[#ff9500]" href="/">Home</a>
-          <a className="text-black hover:text-[#ff9500]" href="#sobre">Sobre</a>
-          <a className="text-black hover:text-[#ff9500]" href="#projetos">Projetos</a>
-          <a className="text-black hover:text-[#ff9500]" href="#contato">Contato</a>
+          <Link className="text-black hover:text-[#ff9500]" href="/">Home</Link>
+          <Link className="text-black hover:text-[#ff9500]" href="#sobre">Sobre</Link>
+          <Link className="text-black hover:text-[#ff9500]" href="#projetos">Projetos</Link>
+          <Link className="text-black hover:text-[#ff9500]" href="#contato">Contato</Link>
         </div>
 
         <button
