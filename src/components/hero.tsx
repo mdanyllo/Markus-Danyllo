@@ -25,8 +25,8 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col items-center md:mt-40 mt-20 px-4 sm:px-8 md:px-16 lg:px-24">
-      <div className="flex flex-col md:flex-row items-center md:items-center w-full md:gap-40 gap-10">
-        <div className="flex flex-col items-center justify-center w-full md:w-1/2 animate-fadeIn">
+      <div className="flex flex-col md:flex-row items-center md:items-center w-full md:gap-30 gap-10">
+        <div className="flex flex-col items-center justify-center w-full md:w-1/2">
           <p className="text-black text-lg sm:text-xl capitalize">Olá, {nome ? nome : "meu amigo(a)"}! Me chamo</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">Markus Danyllo</h1>
           <p className="text-black text-base sm:text-lg">
@@ -44,7 +44,7 @@ export default function Hero() {
         />
       </div>
       </div>
-      <section className="w-1/2 flex justify-center items-center gap-8 sm:justify-end md:ml-52 mt-4 gap-4 sm:gap-8 animate-fadeIn">
+      <section className="w-1/2 flex justify-center items-center gap-6 sm:justify-end md:ml-52 mt-4 sm:gap-8 animate-fadeIn">
         <Link
           className="flex items-center text-black text-sm sm:text-base font-medium gap-2 hover:scale-110 transition-transform duration-300"
           href="https://github.com/mdanyllo"
