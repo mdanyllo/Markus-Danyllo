@@ -12,7 +12,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-8">
           <Link className="text-black hover:text-[#ff9500]" href="/">Home</Link>
-          <Link className="text-black hover:text-[#ff9500]" href="#sobre">Sobre</Link>
+          <Link className="text-black hover:text-[#ff9500]" href="#About">Sobre</Link>
           <Link className="text-black hover:text-[#ff9500]" href="#projetos">Projetos</Link>
           <Link className="text-black hover:text-[#ff9500]" href="#contato">Contato</Link>
         </div>

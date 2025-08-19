@@ -169,5 +169,6 @@ body {
   }
   body {
     @apply font-sans bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }

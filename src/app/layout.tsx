@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kanit, } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar"
 
-
-const geistSans = Geist({
-  variable: "--font-sans",
+const kanit = Kanit({
+  variable: "--font-kanit",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"], // você pode adicionar os pesos que quiser
 });
 
 export const metadata: Metadata = {
@@ -27,7 +22,7 @@ export default function RootLayout({
 
   return (
         <html lang="pt-br">
-      <body className="antialiased">
+      <body className={`${kanit.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
