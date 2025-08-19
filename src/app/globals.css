@@ -170,5 +170,14 @@ body {
   body {
     @apply font-sans bg-background text-foreground;
     font-family: var(--font-sans);
+
+  html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
   }
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
