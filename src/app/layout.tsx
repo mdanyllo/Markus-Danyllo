@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar"
 const kanit = Kanit({
   variable: "--font-kanit",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // você pode adicionar os pesos que quiser
+  weight:  ["200", "300", "400", "500", "700"], // você pode adicionar os pesos que quiser
 });
 
 export const metadata: Metadata = {

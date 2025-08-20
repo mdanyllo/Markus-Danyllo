@@ -24,7 +24,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="flex flex-col items-center md:mt-40 mt-20 px-4 sm:px-8 md:px-16 lg:px-24">
+    <div className="flex flex-col items-center md:mt-40 mt-30 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="flex flex-col md:flex-row items-center md:items-center w-full md:gap-30 gap-10">
         <div className="flex flex-col items-center justify-center w-full md:w-1/2">
           <p className="text-black text-lg sm:text-xl capitalize">Olá, {nome ? nome : "meu amigo(a)"}! Me chamo</p>
@@ -38,8 +38,8 @@ export default function Hero() {
           src="/perfil.JPG"
           alt="Markus programando"
           title="Markus programando no FIRA RoboWorld Cup - Alemanha 2023"
-          width={800}       // largura máxima da imagem
-          height={600}      // altura proporcional à largura
+          width={800}       
+          height={600}      
           className="w-48 sm:w-64 md:w-80 rounded-3xl hover:scale-105 transition-transform duration-500 animate-fadeIn object-cover"
         />
       </div>
