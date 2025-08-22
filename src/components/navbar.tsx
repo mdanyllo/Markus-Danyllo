@@ -9,6 +9,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   if (pathname === "/email") return null;
+  if (pathname === "/not-found") return null;
+  if (pathname === "/404") return null;
 
   const menuItems = [
     { name: "Home", href: "#home" },

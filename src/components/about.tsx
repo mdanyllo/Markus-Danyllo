@@ -19,8 +19,13 @@ export default function About() {
                 <div className="flex flex-col justify-center items-center md:items-start gap-2 mt-14 text-white w-90 md:w-1/3">
                     <p className="text-xs md:text-sm">Desenvolvedor de Software e Técnico de Robótica</p>
                     <h1 className="text-3xl mb-4">Markus Danyllo</h1>
-                    <p className="text-center md:text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a ultricies orci. Pellentesque nibh lorem, dictum sit amet augue sed, malesuada tempus mauris. Nulla nec aliquet arcu. Phasellus eu risus posuere tellus blandit lobortis. In faucibus lacinia sem, et luctus sem convallis eu. Nunc blandit nunc vel ligula consectetur fringilla. Donec neque neque, pharetra sit amet convallis ut, venenatis nec turpis. Nam arcu urna, vestibulum eget sapien quis, finibus aliquam turpis Nunc blandit nunc vel ligula consectetur fringilla. Donec neque neque, pharetra sit amet convallis ut, venenatis nec turpis. Nam arcu urna, vestibulum eget sapien quis, finibus aliquam turpis. Phasellus quis dui mi. Nam at tempus ligula. Vivamus eu ullamcorper enim. Proin aliquam eget metus non mollis. Morbi quis mi sem. Phasellus leo turpis, ornare et sodales et, congue vel lacus.</p>
-                </div>
+                    <p className="text-center md:text-start">Tenho 19 anos e atualmente curso Análise e Desenvolvimento de Sistemas. Meu primeiro contato real com programação aconteceu em 2022, quando comecei a estudar Python. No ano seguinte, me aprofundei em JavaScript, HTML e CSS, e também fui vice-campeão mundial de robótica, uma experiência que consolidou meu interesse por tecnologia e inovação.
+
+                    Em 2024, participei do programa ONE, uma iniciativa da Alura em parceria com a Oracle, que ampliou significativamente minha visão sobre desenvolvimento de software. Após essa experiência, consegui meus primeiros projetos freelance, nos quais pude aplicar meus conhecimentos e ganhar experiência profissional prática com programação.
+
+                    Hoje, atuo como técnico de robótica no IEMA, participo do programa Jovem Tech e integro o programa Bolsa Futuro Digital da Softex PE. Possuo habilidades em NextJS, Tailwind, HTML, CSS, JavaScript e Python, e atualmente estou em processo de aprendizagem de Java.
+                    Apaixonado por tecnologia, busco transformar ideias em soluções digitais inovadoras e de impacto.</p>
+                                    </div>
             </div>
             <div className="flex flex-col items-center mt-20 mb-20">
                 <h1 className="text-3xl md:text-4xl">Habilidades</h1>

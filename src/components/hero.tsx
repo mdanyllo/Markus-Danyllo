@@ -71,7 +71,7 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      <Link href="#home" className="flex items-center justify-center text-black font-medium mt-20 px-6 py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white">
+      <Link href="#projetos" className="flex items-center justify-center text-black font-medium mt-20 px-6 py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white">
         Conheça o meu trabalho
       </Link>
 
