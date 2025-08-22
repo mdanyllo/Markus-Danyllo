@@ -5,9 +5,9 @@ import { Children } from "react";
 
 export default function About() {
     return (
-        <div className="flex flex-col justify-center items-center w-full h-full bg-black mt-10">
-            <div className="md:flex md:flex-row md:gap-26 flex flex-col justify-center gap-10 items-center">
-                <div className="flex justify-center items-center">
+        <div id="sobre" className="flex flex-col justify-center items-center w-full h-full bg-black mt-10 md:scroll-mt-10">
+            <div className="md:flex md:flex-row flex flex-col justify-center gap-10 items-center">
+                <div className="flex justify-center items-center md:w-1/2">
                 <Image
                     src="/about.jpeg"
                     alt="Markus falando no microfone"
