@@ -83,22 +83,24 @@ export default function Hero() {
         <button
         title="Mudar idioma"
           onClick={toggleLang}
-          className="text-white px-1 md:py-2 rounded cursor-pointer transition-colors"
+          className="text-white rounded cursor-pointer transition-colors"
         ><Image src="/tradutor.png" alt="Tradução" width={34} height={30} className="mt-6" />
           {lang === "pt" ? "English" : "Português"}
         </button>
 
         <Link
-        title="Ir para projetos"
+          title="Ir para projetos"
           href="#projetos"
-          className="flex items-center justify-center text-black font-medium px-2 py-3 md:px-6 md:py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white"
-        >
+          className="flex items-center justify-center text-center text-black font-medium w-[220px] py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white box-border">
           {t.buttonWork}
         </Link>
+
         <button
-          className="text-white px-1 md:py-2 rounded cursor-pointer transition-colors invisible"
-        >
-          <Image src="/tradutor.png" alt="Tradução" width={34} height={30} className="mt-6" />
+        title="Mudar idioma"
+          onClick={toggleLang}
+          className="text-white rounded cursor-pointer transition-colors invisible"
+        ><Image src="/tradutor.png" alt="Tradução" width={34} height={30} className="mt-6" />
+          {lang === "pt" ? "English" : "Português"}
         </button>
       </div>
 
