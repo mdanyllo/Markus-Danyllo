@@ -1,8 +1,4 @@
 "use client";
-import Link from "next/link"
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { div } from "framer-motion/client";
 
 export default function NotFound() {
     return (

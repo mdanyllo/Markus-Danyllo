@@ -4,9 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
+import { useTranslation } from "@/context/translateContext";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   if (pathname === "/email") return null;
   if (pathname === "/not-found") return null;
@@ -14,9 +18,9 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "Home", href: "#home" },
-    { name: "Sobre", href: "#sobre" },
-    { name: "Projetos", href: "#projetos" },
-    { name: "Contato", href: "#contato" },
+    { name: t.aboutbar, href: "#sobre" },
+    { name: t.projectsbar, href: "#projetos" },
+    { name: t.contactbar, href: "#contato" },
   ];
 
   return (

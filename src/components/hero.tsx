@@ -1,7 +1,9 @@
 "use client";
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+
+import { useTranslation } from "@/context/translateContext";
 
 export default function Hero() {
   const [nome, setNome] = useState("");
@@ -30,18 +32,23 @@ export default function Hero() {
     }
   }
 
+  const { t, lang, toggleLang} = useTranslation();
+
   return (
-    <div id="home" className="flex flex-col items-center md:mt-40 mt-30 px-4 sm:px-8 md:w-full md:px-16 lg:px-24 scroll-mt-50">
+    <div
+      id="home"
+      className="flex flex-col items-center md:mt-40 mt-30 px-4 sm:px-8 md:w-full md:px-16 lg:px-24 scroll-mt-50"
+    >
       <div className="flex flex-col items-center w-full gap-10 md:flex-row md:gap-80 md:justify-center">
         <div className="flex flex-col items-center w-full md:items-start md:w-1/3">
-          <p className="text-black text-lg sm:text-xl capitalize">
-            Olá, {nome ? nome : "Visitante"}! Me chamo
+          <p className="text-black text-lg sm:text-xl">
+            {t.greeting}, {nome ? nome : lang === "pt" ? "Visitante" : "Visitor"}! {t.introduction}
           </p>
           <h1 className="text-4xl font-bold md:text-6xl md:whitespace-nowrap mb-2">
             Markus Danyllo
           </h1>
           <p className="text-black text-sm md:whitespace-nowrap md:text-base sm:text-lg">
-            Desenvolvedor de Software e Técnico de Robótica
+            {t.developer}
           </p>
         </div>
         <div className="flex flex-col items-center w-48 sm:w-64 md:w-80 h-48 sm:h-64 md:h-80 rounded-3xl">
@@ -49,8 +56,8 @@ export default function Hero() {
             src="/perfil.JPG"
             alt="Markus programando"
             title="Markus programando no FIRA RoboWorld Cup - Alemanha 2023"
-            width={800}       
-            height={600}      
+            width={800}
+            height={600}
             className="w-48 sm:w-64 md:w-80 rounded-3xl object-cover"
           />
           <section className="flex justify-center items-center gap-6 mt-4 sm:gap-8 animate-fadeIn">
@@ -71,29 +78,49 @@ export default function Hero() {
           </section>
         </div>
       </div>
-      <Link href="#projetos" className="flex items-center justify-center text-black font-medium mt-20 px-6 py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white">
-        Conheça o meu trabalho
-      </Link>
+
+      <div className="flex justify-between items-center w-full mt-20">
+        <button
+        title="Mudar idioma"
+          onClick={toggleLang}
+          className="text-white px-1 md:py-2 rounded cursor-pointer transition-colors"
+        ><Image src="/tradutor.png" alt="Tradução" width={34} height={30} className="mt-6" />
+          {lang === "pt" ? "English" : "Português"}
+        </button>
+
+        <Link
+        title="Ir para projetos"
+          href="#projetos"
+          className="flex items-center justify-center text-black font-medium px-2 py-3 md:px-6 md:py-3 border-2 border-[#ff9500] rounded-full cursor-pointer transition-colors duration-300 hover:bg-[#f58f00] hover:text-white"
+        >
+          {t.buttonWork}
+        </Link>
+        <button
+          className="text-white px-1 md:py-2 rounded cursor-pointer transition-colors invisible"
+        >
+          <Image src="/tradutor.png" alt="Tradução" width={34} height={30} className="mt-6" />
+        </button>
+      </div>
 
       {showModal && (
         <div className="fixed inset-0 backdrop-blur-md bg-black/20 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center w-72 sm:w-80">
-            <h2 className="text-xl text-black font-bold mb-4">Qual é o seu nome?</h2>
+            <h2 className="text-xl text-black font-bold mb-4">{t.modalTitle}</h2>
             <input
               type="text"
               value={nome}
               onChange={(e) => setNome(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSaveName()}
               className="text-black border rounded p-2 w-full"
-              placeholder="Digite seu nome"
+              placeholder={t.modalPlaceholder}
             />
             <button
               onClick={handleSaveName}
-              className="mt-4 bg-[#f58f00] text-white px-4 py-2 rounded cursor-pointer"
+              className="mt-4 bg-[#f58f00] text-white px-4 py-2 rounded cursor-pointer hover:bg-[#f78f2c] transition-colors"
             >
-              Continuar
+              {t.modalButton}
             </button>
-          </div> 
+          </div>
         </div>
       )}
     </div>
